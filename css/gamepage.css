@@ -1,0 +1,113 @@
+/* ------------------ gamepage ------------------------ */
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* ------------------ header ------------------------ */
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-white);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* ------------------ Main img ------------------------ */
+
+.mainImg {
+    display: flex;
+    justify-content: center;
+    max-height: 60vh;
+}
+
+.mainImg img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ------------------ gameinfo first ------------------------ */
+
+.gameinfo-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.first-img {
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------ gameinfo second ------------------------ */
+
+.gameinfo-second {
+    background: url('../assets/2.png') no-repeat center center/cover;
+}
+
+/* ------------------ gameinfo third ------------------------ */
+
+.gameinfo-third {
+    background: url('../assets/3.png') no-repeat center center/cover;
+}
+
+/*-------------------- size control ----------------------*/
+
+@media(max-width:991px) {
+    .first-img img {
+        margin-top: 3rem;
+        width: 85%;
+        object-fit: cover;
+    }
+}
+
+@media(max-width:895px) {
+    .navbar a {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
