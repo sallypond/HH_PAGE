@@ -135,10 +135,31 @@
 @media(max-width:1458px) {
     .company-background {
         padding: 50px 100px 50px 100px;
+        align-items: normal;
+        justify-content: center;
+        flex-direction: column-reverse;
         /* width: 1300px; */
         /* height: 343px; */
     }
 
+    .company-content {
+        width: 100%;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .company-logo {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .company-logo img {
+        width: 400px;
+    }
+
+    .bottom-title {
+        margin-bottom: 0px;
+    }
 
     .games {
         margin-top: 70px;

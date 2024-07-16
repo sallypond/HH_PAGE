@@ -51,7 +51,7 @@ function setSocial() {
 
 setSocial();
 
-const mobileView = window.matchMedia(`(max-width: 766px)`);
+const mobileView = window.matchMedia(`(max-width: 1458px)`);
 const biTopTitle = document.querySelector('.top-title');
 const bibottomTitle = document.querySelector('.bottom-title');
 
