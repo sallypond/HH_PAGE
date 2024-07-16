@@ -8,10 +8,10 @@ const socialTags = [
 ]
 
 const socialLinks = [
-    { icon: 'bx bxl-discord', url: "https://discord.gg/z8BNWsTDVB" },
-    { icon: 'bx bxl-youtube', url: "https://www.youtube.com/channel/UCZXwTimivga36LyLqNVUedA" },
-    { icon: 'bx bxl-twitter', url: "https://twitter.com/studio_pond" },
-    { icon: 'bx bxl-tiktok', url: "https://www.tiktok.com/@pond_official" },
+    { icon: 'fa-brands fa-facebook-f', url: "" },
+    { icon: 'fa-brands fa-instagram', url: "" },
+    { icon: 'fa-brands fa-x-twitter', url: "" },
+    { icon: 'fa-brands fa-discord', url: "" },
 ]
 
 window.onscroll = () => {
@@ -50,3 +50,22 @@ function setSocial() {
 }
 
 setSocial();
+
+const mobileView = window.matchMedia(`(max-width: 766px)`);
+const biTopTitle = document.querySelector('.top-title');
+const bibottomTitle = document.querySelector('.bottom-title');
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function mobileViewHandler(view){
+    if (view.matches) {
+        biTopTitle.classList.add(HIDDEN_CLASSNAME);
+        bibottomTitle.classList.remove(HIDDEN_CLASSNAME);
+    } else {
+        biTopTitle.classList.remove(HIDDEN_CLASSNAME);
+        bibottomTitle.classList.add(HIDDEN_CLASSNAME);
+    }
+}
+
+mobileViewHandler(mobileView);
+mobileView.addEventListener("change", mobileViewHandler);

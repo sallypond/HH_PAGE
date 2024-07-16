@@ -1,0 +1,53 @@
+.title {
+    margin: 100px 0px 50px 160px;
+}
+
+.policy-main {
+    margin: 0px 160px 100px 430px;
+}
+
+.title h1 {
+    font-size: 30px;
+}
+
+.title h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.policy-main p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 25px; 
+    color: var(--text-policy-title);
+}
+
+.policy-main h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--text-policy-title);
+}
+
+.policy-main h4 {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--text-policy-title);
+}
+
+
+.policy-main span {
+    color: var(--text-policy-sub);
+    line-height: 25px;
+}
+
+/*-------------------- size control ----------------------*/
+
+@media(max-width:1458px) {
+
+}
+
+@media(max-width:766px) {
+
+}
