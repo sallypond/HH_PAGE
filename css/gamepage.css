@@ -35,9 +35,9 @@
 }
 
 .info-text {
-    width: 51%;
-    /* margin-left: 405px;
-    margin-right: 405px; */
+    /* width: 51%; */
+    margin-left: 285px;
+    margin-right: 285px;
 }
 
 .info-img {
@@ -81,9 +81,9 @@
     }
 
     .info-text {
-        width: 66%;
-        /* margin-left: 300px;
-        margin-right: 300px; */
+        /* width: 66%; */
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .info-img img {

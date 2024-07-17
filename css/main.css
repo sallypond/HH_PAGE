@@ -32,10 +32,10 @@
 }
 
 .about-text {
-    width: 60%;
+    /* width: 60%; */
     text-align: center;
-    /* margin-left: 270px;
-    margin-right: 270px; */
+    margin-left: 270px;
+    margin-right: 270px;
 }
 
 /* ------------------ company ------------------------ */
@@ -72,13 +72,13 @@
 .company-logo {
     display: flex;
     justify-content: center;
-    width: 50%;
+    margin-left: 180px;
 }
 
 .company-logo img {
-    width: 80%;
-    /* width: 408px;
-    height: 83px; */
+    /* width: 80%; */
+    width: 408px;
+    height: 83px;
 }
 
 /* ------------------ games ------------------------ */
@@ -115,15 +115,19 @@
     cursor: pointer;
 }
 
+.item-button:hover .kosmalllogo {
+    transform: scale(1.1);
+}
+
+.item-button:hover .ensmalllogo {
+    transform: scale(1.1);
+}
+
 .item-button img {
     width: 358px;
     height: 286px;
     margin-bottom: 32px;
     transition: 0.3s ease;
-}
-
-.item-button img:hover {
-    transform: scale(1.1);
 }
 
 .item-button p {
@@ -158,12 +162,8 @@
     }
 
     .company-logo {
-        width: 100%;
+        margin-left: 0px;
         margin-bottom: 50px;
-    }
-
-    .company-logo img {
-        width: 400px;
     }
 
     .bottom-title {
@@ -198,9 +198,9 @@
     }
 
     .about-text {
-        width: 65%;
-        /* margin-left: 220px;
-        margin-right: 220px; */
+        /* width: 65%; */
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
@@ -208,12 +208,6 @@
     .about-content img {
         width: 340px;
         height: 69px;
-    }
-
-    .about-text {
-        width: 95%;
-        /* margin-left: 0px;
-        margin-right: 0px; */
     }
 
     .company-background {
@@ -235,14 +229,12 @@
     }
 
     .company-logo {
-        width: 100%;
+        margin-bottom: 5px;
     }
 
     .company-logo img {
-        width: 60%;
-        margin-bottom: 10px;
-        /* width: 350px;
-        height: 71px; */
+        width: 350px;
+        height: 71px;
     }
 
     .game-item {
