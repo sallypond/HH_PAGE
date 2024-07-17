@@ -1,8 +1,45 @@
 let langSelector = document.querySelector('.lang-icon');
+let langIcon = langSelector.querySelector('.langicon');
 let langList = document.querySelector('.langList');
 let options = document.getElementsByTagName('li');
 
-let checkTable = ["fa-solid fa-globe", "ko", "en", "langList", "lang-icon"];
+let checkTable = ["fa-solid fa-globe", "fa-solid fa-globe langicon active", "ko", "en", "langList", "lang-icon"];
+
+function selectorControl() {
+    langSelector.onclick = function () {
+        var status = langList.style.display == 'none';
+
+        if (status) {
+            langList.style.display = 'flex';
+            langIcon.classList.add('active');
+        } else {
+            langList.style.display = 'none';
+            langIcon.classList.remove('active');
+        }
+    }
+
+    let targetName = window.location.pathname;
+    let lastLang = document.querySelector('.ko');
+
+    for (option of options) {
+        option.onclick = function (event) {
+            langList.style.display = 'none';
+            lastLang.classList.remove('active');
+            langIcon.classList.remove('active');
+
+            var selectedLang = event.target.className
+            console.log(selectedLang, targetName);
+            lastLang = document.querySelector('.' + selectedLang);
+            lastLang.classList.add('active');
+
+            for (const index in data[targetName][selectedLang]) {
+                const target = document.querySelector("." + index);
+                if (target == null) {continue;}
+                target.textContent = data[targetName][selectedLang][index];
+            }
+        }
+    }
+}
 
 function visibleControl(){
     $(document).mouseup(function (e) {
@@ -12,42 +49,12 @@ function visibleControl(){
         for (const index in checkTable) {
             if (checkTable.includes(target)) { return; }
         }
-    
+
+        langIcon.classList.remove('active');
         langList.style.display = 'none';
         return;
     });
 }
-
-function selectorControl() {
-    langSelector.onclick = function () {
-        var status = langList.style.display == 'none';
-
-        if (status) {
-            langList.style.display = 'flex';
-        } else {
-            langList.style.display = 'none';
-        }
-    }
-
-    let lastLang = document.querySelector('.ko');
-
-    for (option of options) {
-        option.onclick = function (event) {
-            langList.style.display = 'none';
-            lastLang.classList.remove('active');
-
-            var selectedLang = event.target.className
-            lastLang = document.querySelector('.' + selectedLang);
-            lastLang.classList.add('active');
-
-            for (const index in data[selectedLang]) {
-                const target = document.querySelector("." + index);
-                target.textContent = data[selectedLang][index];
-            }
-        }
-    }
-}
-
 
 function initialize() {
     langList.style.display = 'none';

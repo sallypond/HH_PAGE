@@ -39,15 +39,64 @@
 
 .policy-main span {
     color: var(--text-policy-sub);
-    line-height: 25px;
+    font-weight: 300;
+    line-height: 17px;
 }
 
 /*-------------------- size control ----------------------*/
 
 @media(max-width:1458px) {
+    .title {
+        margin: 100px 0px 50px 80px;
+    }
+    
+    .policy-main {
+        margin: 0px 80px 200px 190px;
+    }
 
+    .policy-main p {
+        font-size: 20px;
+    }
+    
+    .policy-main h3 {
+        font-size: 20px;
+    }
+    
+    .policy-main h4 {
+        font-size: 20px;
+    }
+      
+    .policy-main span {
+        font-size: 20px;
+    }
 }
 
 @media(max-width:766px) {
+    .title {
+        margin: 70px 0px 50px 24px;
+    }
+    
+    .policy-main {
+        margin: 0px 24px 200px 24px;
+    }
 
+    .policy-main p {
+        font-size: 22px;
+        line-height: 29px;
+    }
+    
+    .policy-main h3 {
+        font-size: 22px;
+        line-height: 29px;
+    }
+    
+    .policy-main h4 {
+        font-size: 22px;
+        line-height: 29px;
+    }
+      
+    .policy-main span {
+        font-size: 22px;
+        line-height: 29px;
+    }
 }

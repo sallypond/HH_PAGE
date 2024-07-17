@@ -67,5 +67,7 @@ function mobileViewHandler(view){
     }
 }
 
-mobileViewHandler(mobileView);
-mobileView.addEventListener("change", mobileViewHandler);
+if (window.location.pathname == "/index.html"){
+    mobileViewHandler(mobileView);
+    mobileView.addEventListener("change", mobileViewHandler);
+}
