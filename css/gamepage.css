@@ -1,4 +1,8 @@
-/* gamelogo */
+*{
+    font-family: 'NEXON Lv1 Gothic OTF', "Kanit";
+}
+
+/* ---------------- gamelogo ---------------- */
 
 .logo-img {
     display: flex;

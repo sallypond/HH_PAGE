@@ -1,3 +1,9 @@
+* {
+    font-family:  "Kanit", "Noto Sans KR";
+}
+
+/*----------------------------------------------*/
+
 .title {
     margin: 100px 0px 50px 160px;
 }
@@ -18,7 +24,7 @@
 .policy-main p {
     font-size: 17px;
     font-weight: 300;
-    line-height: 25px; 
+    line-height: 25px;
     color: var(--text-policy-title);
 }
 
@@ -49,7 +55,7 @@
     .title {
         margin: 100px 0px 50px 80px;
     }
-    
+
     .policy-main {
         margin: 0px 80px 200px 190px;
     }
@@ -57,15 +63,15 @@
     .policy-main p {
         font-size: 20px;
     }
-    
+
     .policy-main h3 {
         font-size: 20px;
     }
-    
+
     .policy-main h4 {
         font-size: 20px;
     }
-      
+
     .policy-main span {
         font-size: 20px;
     }
@@ -75,7 +81,7 @@
     .title {
         margin: 70px 0px 50px 24px;
     }
-    
+
     .policy-main {
         margin: 0px 24px 200px 24px;
     }
@@ -84,17 +90,17 @@
         font-size: 22px;
         line-height: 29px;
     }
-    
+
     .policy-main h3 {
         font-size: 22px;
         line-height: 29px;
     }
-    
+
     .policy-main h4 {
         font-size: 22px;
         line-height: 29px;
     }
-      
+
     .policy-main span {
         font-size: 22px;
         line-height: 29px;

@@ -6,6 +6,24 @@
     unicode-range: U+AC00-D7A3;
 }
 
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+26;
+}
+
+/*--------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +32,6 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'NEXON Lv1 Gothic OTF', "Kanit";
 }
 
 :root {

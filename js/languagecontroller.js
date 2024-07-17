@@ -5,6 +5,33 @@ let options = document.getElementsByTagName('li');
 
 let checkTable = ["fa-solid fa-globe", "fa-solid fa-globe langicon active", "ko", "en", "langList", "lang-icon"];
 
+let koSmallLogo = document.querySelector('.kosmalllogo');
+let enSmallLogo = document.querySelector('.ensmalllogo');
+let koBigLogo = document.querySelector('.kobiglogo');
+let enBigLogo = document.querySelector('.enbiglogo');
+
+function logoControl(selectedLang){
+    if (koBigLogo != null){
+        if (selectedLang == "ko"){
+            koBigLogo.classList.remove('hidden');
+            enBigLogo.classList.add('hidden');
+        }else{
+            koBigLogo.classList.add('hidden');
+            enBigLogo.classList.remove('hidden');
+        }
+    }
+
+    if (koSmallLogo != null){
+        if (selectedLang == "ko"){
+            koSmallLogo.classList.remove('hidden');
+            enSmallLogo.classList.add('hidden');
+        }else{
+            koSmallLogo.classList.add('hidden');
+            enSmallLogo.classList.remove('hidden');
+        }
+    }
+}
+
 function selectorControl() {
     langSelector.onclick = function () {
         var status = langList.style.display == 'none';
@@ -28,9 +55,11 @@ function selectorControl() {
             langIcon.classList.remove('active');
 
             var selectedLang = event.target.className
-            console.log(selectedLang, targetName);
+            
             lastLang = document.querySelector('.' + selectedLang);
             lastLang.classList.add('active');
+
+            logoControl(selectedLang);
 
             for (const index in data[targetName][selectedLang]) {
                 const target = document.querySelector("." + index);
