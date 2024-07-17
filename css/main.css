@@ -119,6 +119,11 @@
     width: 358px;
     height: 286px;
     margin-bottom: 32px;
+    transition: 0.3s ease;
+}
+
+.item-button img:hover {
+    transform: scale(1.1);
 }
 
 .item-button p {
