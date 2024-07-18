@@ -61,6 +61,13 @@ function selectorControl() {
 
             logoControl(selectedLang);
 
+            // all
+            for (const index in data['all'][selectedLang]) {
+                const target = document.querySelector("." + index);
+                if (target == null) {continue;}
+                target.textContent = data['all'][selectedLang][index];
+            }
+
             for (const index in data[targetName][selectedLang]) {
                 const target = document.querySelector("." + index);
                 if (target == null) {continue;}
