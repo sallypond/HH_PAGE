@@ -55,6 +55,7 @@ function selectorControl() {
             langIcon.classList.remove('active');
 
             var selectedLang = event.target.className
+            console.log(selectedLang);
             
             lastLang = document.querySelector('.' + selectedLang);
             lastLang.classList.add('active');
