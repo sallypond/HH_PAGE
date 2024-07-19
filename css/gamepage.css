@@ -6,6 +6,7 @@
 
 .logo-img {
     display: flex;
+    width: 100%;
     align-items: center;
     margin-left: 160px;
 }
@@ -59,16 +60,25 @@
 .info-bottom {
     display: flex;
     justify-content: center;
+    margin-bottom: 200px;
     padding: 0px;
 }
 
 .bottom-img img{
     /* width: 100vw; */
+    border-radius: 15px;
     width: 100%;
     height: 100%;
 }
 
 /*-------------------- size control ----------------------*/
+
+@media(min-width:1921px) {
+    .logo-img{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
 
 @media(max-width:1458px) {
     .logo-img {
@@ -86,14 +96,9 @@
         margin-right: 0px;
     }
 
-    .info-img img {
-        width: 70%;
-        /* width: 860px;
-        height: 400px; */
-    }
-
-    .info-bottom {
-        margin-bottom: 200px;
+    .info-img img{
+        width: 100%;
+        content: url(../assets/GameIntro_Ch_Small.png);
     }
 }
 
@@ -111,11 +116,5 @@
         width: 103%;
          /* margin-left: 24px;
          margin-right: 24px; */
-     }
- 
-     .info-img img {
-        width: 100%;
-         /* width: 720px;
-         height: 410px; */
      }
 }
