@@ -51,23 +51,57 @@ function setSocial() {
 
 setSocial();
 
-const mobileView = window.matchMedia(`(max-width: 1458px)`);
+/*---------------------------------*/
+
+const indexHTML = document.querySelector(".index");
+const gamepageHTML = document.querySelector(".gamepage"); 
+
+const tabletView = window.matchMedia(`(max-width: 1458px)`);
+const mobileView = window.matchMedia(`(max-width: 766px)`);
+
 const biTopTitle = document.querySelector('.top-title');
 const bibottomTitle = document.querySelector('.bottom-title');
 
-const HIDDEN_CLASSNAME = "hidden";
+const mainImg = document.querySelector('.mainImg');
 
-function mobileViewHandler(view){
+const HIDDEN_CLASSNAME = "hidden";
+let SELECTED_LANG = "ko";
+let LAST_LANG = document.querySelector('.ko');
+
+function tabletViewHandler(view){
     if (view.matches) {
-        biTopTitle.classList.add(HIDDEN_CLASSNAME);
-        bibottomTitle.classList.remove(HIDDEN_CLASSNAME);
+        if (indexHTML != null){
+            biTopTitle.classList.add(HIDDEN_CLASSNAME);
+            bibottomTitle.classList.remove(HIDDEN_CLASSNAME);
+        }
+        mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Tablet.png')";
     } else {
-        biTopTitle.classList.remove(HIDDEN_CLASSNAME);
-        bibottomTitle.classList.add(HIDDEN_CLASSNAME);
+        if (indexHTML != null){
+            biTopTitle.classList.remove(HIDDEN_CLASSNAME);
+            bibottomTitle.classList.add(HIDDEN_CLASSNAME);
+             mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Desktop.png')";
+        } 
     }
 }
 
-if (window.location.pathname == "/index.html"){
+function mobileViewHandler(view){
+    if (view.matches) {
+        if (indexHTML != null){
+            mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Mobile_Mainpage.png')";
+        }else{
+            mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Mobile.png')";
+        }
+    }else{
+         mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Tablet.png')";
+    }
+}
+
+function viewController(){
     mobileViewHandler(mobileView);
     mobileView.addEventListener("change", mobileViewHandler);
+    
+    tabletViewHandler(tabletView);
+    tabletView.addEventListener("change", tabletViewHandler);   
 }
+
+viewController();

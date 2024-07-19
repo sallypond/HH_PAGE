@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'NEXON Lv1 Gothic OTF', "Kanit";
 }
 
@@ -108,9 +108,8 @@
     align-items: center;
     justify-content: center;
     width: 400px;
-    height: 550px;
+    height: 100%;
     border-radius: 15px;
-    padding: 50px;
     background-color: var(--trans-gray-background);
     cursor: pointer;
 }
@@ -124,20 +123,20 @@
 }
 
 .item-button img {
-    width: 358px;
-    height: 286px;
-    margin-bottom: 32px;
+    width: 318px;
+    height: 318px;
     transition: 0.3s ease;
 }
 
 .item-button p {
     color: var(--white);
     text-align: start;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .item-button .arrow {
     position: relative;
-    top: 30px;
     left: 170px;
     width: 10px;
     height: 20px;
@@ -182,19 +181,16 @@
     .item-button {
         width: 440px;
         height: 486px;
-        padding: 30px 50px 30px 50px;
     }
 
     .item-button img {
-        width: 298px;
-        height: 238px;
-        margin-bottom: 40px;
+        width: 278px;
+        height: 278px;
     }
 
     .item-button .arrow {
         position: relative;
-        top: 30px;
-        left: 190px;
+        left: 180px;
     }
 
     .about-text {
@@ -249,19 +245,22 @@
         justify-content: center;
         width: 350px;
         height: 520px;
-        padding: 15px 25px 25px 25px;
         background-color: var(--trans-gray-background);
         cursor: pointer;
     }
 
     .item-button img {
-        width: 316px;
-        height: 252px;
-        margin-bottom: 10px;
+        width: 251px;
+        height: 251px;
+    }
+
+    .item-button p {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .item-button .arrow {
-        top: 20px;
+        top: 10px;
         left: 140px;
     }
 }

@@ -10,9 +10,11 @@ let enSmallLogo = document.querySelector('.ensmalllogo');
 let koBigLogo = document.querySelector('.kobiglogo');
 let enBigLogo = document.querySelector('.enbiglogo');
 
-function logoControl(selectedLang){
+let maintexts = document.querySelectorAll('.maintext');
+
+function logoControl(){
     if (koBigLogo != null){
-        if (selectedLang == "ko"){
+        if (SELECTED_LANG == "ko"){
             koBigLogo.classList.remove('hidden');
             enBigLogo.classList.add('hidden');
         }else{
@@ -22,13 +24,26 @@ function logoControl(selectedLang){
     }
 
     if (koSmallLogo != null){
-        if (selectedLang == "ko"){
+        if (SELECTED_LANG == "ko"){
             koSmallLogo.classList.remove('hidden');
             enSmallLogo.classList.add('hidden');
         }else{
             koSmallLogo.classList.add('hidden');
             enSmallLogo.classList.remove('hidden');
         }
+    }
+}
+
+function fontControl(){
+    console.log(maintexts);
+    if (SELECTED_LANG == "ko"){
+        maintexts.forEach(text => {
+            text.classList.add('krtext');
+        });
+    }else{
+        maintexts.forEach(text => {
+            text.classList.remove('krtext');
+        });
     }
 }
 
@@ -44,38 +59,38 @@ function selectorControl() {
             langIcon.classList.remove('active');
         }
     }
-
-    let indexHTML = document.querySelector(".index");
-    let gamepageHTML = document.querySelector(".gamepage");
-
+ 
     let targetName = indexHTML != null ? indexHTML.className : gamepageHTML.className;
 
-    let lastLang = document.querySelector('.ko');
+    console.log(LAST_LANG, "<<현재 언어");
 
     for (option of options) {
         option.onclick = function (event) {
             langList.style.display = 'none';
-            lastLang.classList.remove('active');
+            LAST_LANG.classList.remove('active');
             langIcon.classList.remove('active');
 
-            var selectedLang = event.target.className
+            SELECTED_LANG = event.target.className;
 
-            lastLang = document.querySelector('.' + selectedLang);
-            lastLang.classList.add('active');
+            LAST_LANG = document.querySelector('.' + SELECTED_LANG);
+            LAST_LANG.classList.add('active');
 
-            logoControl(selectedLang);
+            console.log(LAST_LANG, "<<언어 변경");
+
+            logoControl();
+            fontControl();
 
             // all
-            for (const index in data['all'][selectedLang]) {
+            for (const index in data['all'][SELECTED_LANG]) {
                 const target = document.querySelector("." + index);
                 if (target == null) {continue;}
-                target.textContent = data['all'][selectedLang][index];
+                target.textContent = data['all'][SELECTED_LANG][index];
             }
 
-            for (const index in data[targetName][selectedLang]) {
+            for (const index in data[targetName][SELECTED_LANG]) {
                 const target = document.querySelector("." + index);
                 if (target == null) {continue;}
-                target.textContent = data[targetName][selectedLang][index];
+                target.textContent = data[targetName][SELECTED_LANG][index];
             }
         }
     }
