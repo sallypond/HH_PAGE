@@ -260,7 +260,7 @@ section {
 /*-------------------- size control ----------------------*/
 
 @media(min-width:1921px) {
-    body {
+    .about, .company, .games, .info, .info-bottom {
         max-width: 1600px;
         margin: 0 auto;
     }
