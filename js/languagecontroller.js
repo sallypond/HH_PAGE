@@ -55,12 +55,13 @@ function selectorControl() {
             langIcon.classList.remove('active');
 
             var selectedLang = event.target.className
-            console.log(selectedLang);
+            console.log(targetName, "<<< 타겟 네임!")
+            console.log(selectedLang, "<<< 선택 언어!");
             
             lastLang = document.querySelector('.' + selectedLang);
             lastLang.classList.add('active');
 
-            logoControl(targetName, selectedLang);
+            logoControl(selectedLang);
 
             // all
             for (const index in data['all'][selectedLang]) {
