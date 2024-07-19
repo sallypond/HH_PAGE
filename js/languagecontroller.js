@@ -60,7 +60,7 @@ function selectorControl() {
             lastLang = document.querySelector('.' + selectedLang);
             lastLang.classList.add('active');
 
-            logoControl(selectedLang);
+            logoControl(targetName, selectedLang);
 
             // all
             for (const index in data['all'][selectedLang]) {
