@@ -55,7 +55,7 @@ function selectorControl() {
             langIcon.classList.remove('active');
 
             var selectedLang = event.target.className
-            console.log(targetName, "<<< 타겟 네임!")
+            console.log(targetName, "<<< 타겟 네임!");
             console.log(selectedLang, "<<< 선택 언어!");
             
             lastLang = document.querySelector('.' + selectedLang);
@@ -99,6 +99,8 @@ function initialize() {
 
     selectorControl();
     visibleControl();
+
+    console.log("Test001");
 }
 
 initialize();
