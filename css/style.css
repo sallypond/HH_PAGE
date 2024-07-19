@@ -130,6 +130,11 @@ section {
 .header-logo img {
     width: 202px;
     height: 41px;
+    transition: 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.1);
 }
 
 .navbar a {
