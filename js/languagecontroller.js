@@ -45,7 +45,11 @@ function selectorControl() {
         }
     }
 
-    let targetName = window.location.pathname;
+    let indexHTML = document.querySelector(".index");
+    let gamepageHTML = document.querySelector(".gamepage");
+
+    let targetName = indexHTML != null ? indexHTML.className : gamepageHTML.className;
+
     let lastLang = document.querySelector('.ko');
 
     for (option of options) {
@@ -55,9 +59,7 @@ function selectorControl() {
             langIcon.classList.remove('active');
 
             var selectedLang = event.target.className
-            console.log(targetName, "<<< 타겟 네임!");
-            console.log(selectedLang, "<<< 선택 언어!");
-            
+
             lastLang = document.querySelector('.' + selectedLang);
             lastLang.classList.add('active');
 
@@ -100,7 +102,7 @@ function initialize() {
     selectorControl();
     visibleControl();
 
-    console.log("Test001");
+    console.log("Test002");
 }
 
 initialize();
