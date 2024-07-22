@@ -261,6 +261,12 @@ section {
     font-weight: 300;
 }
 
+.side {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .social {
     display: flex;
     align-items: top;
@@ -279,6 +285,15 @@ section {
 
 .social a:hover {
     transform: scale(1.2)translateY(-5px);
+}
+
+.pondstudio img {
+    width: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+.pondstudio img:hover {
+    transform: scale(1.1);
 }
 
 
