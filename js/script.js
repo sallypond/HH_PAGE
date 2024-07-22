@@ -66,7 +66,6 @@ const mainImg = document.querySelector('.mainImg');
 
 const HIDDEN_CLASSNAME = "hidden";
 let SELECTED_LANG = "ko";
-let LAST_LANG = document.querySelector('.ko');
 
 function tabletViewHandler(view){
     if (view.matches) {
