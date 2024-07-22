@@ -81,7 +81,7 @@ function tabletViewHandler(view){
             bibottomTitle.classList.add(HIDDEN_CLASSNAME);
         } 
         console.log("데스크탑");
-        mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Desktop.png')";
+        mainImg.style.backgroundImage = "url('../assets/Landing_3.png')";
     }
 }
 
