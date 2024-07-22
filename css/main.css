@@ -145,6 +145,10 @@
 /*-------------------- size control ----------------------*/
 
 @media(max-width:1458px) {
+    .mainImg {
+        background: url('../assets/GameIntroduce_Tablet.png') no-repeat center center/cover;
+    }
+
     .company-background {
         padding: 50px 100px 50px 100px;
         align-items: normal;
@@ -201,6 +205,10 @@
 }
 
 @media(max-width:766px) {
+    .mainImg {
+        background: url('../assets/GameIntroduce_Mobile_Mainpage.png') no-repeat center center/cover;
+    }
+
     .about-content img {
         width: 340px;
         height: 69px;

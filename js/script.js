@@ -73,37 +73,15 @@ function tabletViewHandler(view){
             biTopTitle.classList.add(HIDDEN_CLASSNAME);
             bibottomTitle.classList.remove(HIDDEN_CLASSNAME);
         }
-        console.log("타블렛");
-        mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Tablet.png')";
     } else {
         if (indexHTML != null){
             biTopTitle.classList.remove(HIDDEN_CLASSNAME);
             bibottomTitle.classList.add(HIDDEN_CLASSNAME);
         } 
-        console.log("데스크탑");
-        mainImg.style.backgroundImage = "url('../assets/Landing_3.png')";
-    }
-}
-
-function mobileViewHandler(view){
-    if (view.matches) {
-        if (indexHTML != null){
-            mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Mobile_Mainpage.png')";
-        }else{
-            mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Mobile.png')";
-        }
-
-        console.log("모바일");
-    }else{
-        console.log("모바일 타블렛");
-         mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Tablet.png')";
     }
 }
 
 function viewController(){
-    mobileViewHandler(mobileView);
-    mobileView.addEventListener("change", mobileViewHandler);
-    
     tabletViewHandler(tabletView);
     tabletView.addEventListener("change", tabletViewHandler);   
 }
