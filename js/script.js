@@ -78,8 +78,8 @@ function tabletViewHandler(view){
         if (indexHTML != null){
             biTopTitle.classList.remove(HIDDEN_CLASSNAME);
             bibottomTitle.classList.add(HIDDEN_CLASSNAME);
-             mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Desktop.png')";
         } 
+        mainImg.style.backgroundImage = "url('../assets/GameIntroduce_Desktop.png')";
     }
 }
 
