@@ -35,8 +35,8 @@ const data = {
             "info-text": "세상에서 가장 희귀하고 멋진 곰팡이를 키워내세요! 2054년 어느 날, 인류 역사상 최초로 탈모치료제가 개발되었다는 뉴스가 보도되었습니다. 비밀 재료는 바로 곰팡이..! 전세계적으로 곰팡이 품귀 현상이 일어난 지금, 집안에 널린 곰팡이를 활용할 절호의 기회입니다. 흔한 곰팡이부터 아주 희귀하고 값진 곰팡이까지, 곰팡이 키우기는 계속됩니다.",
         },
         "en": {
-            "info-title": "Mold Farm",
-            "info-text": "Grow the world's rarest and most amazing mold! 'Moldfarm' is an idle simulation game where you upgrade the environment to optimize mold growth, and cultivate a diverse array of molds to sell for profit. One day in 2054, a hair loss treatment was developed using a secret mold-derived ingredient. This is your chance to get rich from the mold you have in your home!",
+            "info-title": "Idle Mold Farm",
+            "info-text": "Grow the world's rarest and most amazing mold! One day in 2054, a hair loss treatment was developed using a secret mold-derived ingredient. 'Idle Mold farm' is an idle simulation game where you upgrade the environment to optimize mold growth, and cultivate a diverse array of molds to sell for profit. This is your chance to get rich from the mold you have in your home!",
         },
     },
 }

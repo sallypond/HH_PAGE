@@ -99,7 +99,7 @@
     /* width: 1600px; */
     height: 550px;
     border-radius: 15px;
-    background: url('../assets/Landing_3.png') no-repeat center center/cover;
+    background: url('../assets/GameIntroduce_Desktop.png') no-repeat center center/cover;
 }
 
 .item-button {
@@ -145,9 +145,6 @@
 /*-------------------- size control ----------------------*/
 
 @media(max-width:1458px) {
-    .mainImg {
-        background: url('../assets/GameIntroduce_Tablet.png') no-repeat center center/cover;
-    }
 
     .company-background {
         padding: 50px 100px 50px 100px;
@@ -205,8 +202,8 @@
 }
 
 @media(max-width:766px) {
-    .mainImg {
-        background: url('../assets/GameIntroduce_Mobile_Mainpage.png') no-repeat center center/cover;
+    .mainBIImg {
+        background: url('../assets/MainPageTop_Mobile.png') no-repeat center center/cover;
     }
 
     .about-content img {
@@ -272,3 +269,82 @@
         left: 140px;
     }
 }
+
+@media(max-width:390px) {
+    .about {
+        margin-top: 50px;
+    }
+    
+    .about-content {
+        margin-top: 30px;
+    }
+
+    .about-content img {
+        width: 174px;
+        height: 35px;
+    }
+
+    .about-subtitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .line {
+        width: 30px;
+    }
+
+    .company {
+        margin-top: 30px;
+    }
+
+    .company-background {
+        padding: 25px;
+    }
+
+    .bottom-title {
+        font-size: 13px;
+    }
+
+    .company-logo img {
+        width: 178px;
+        height: 36px;
+    }
+
+    .games {
+        margin-top: 30px;
+    }
+
+    .games-container {
+        margin-top: 30px;
+    }
+
+    .game-item {
+        /* width: 367px; */
+        height: 300px;
+    }
+
+    .item-button {
+        width: 178px;
+        height: 300px;
+    }
+
+    .item-button img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .item-button p {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .item-button .arrow {
+        top: -10px;
+        left: 70px;
+    }
+
+    .games-container {
+        margin-bottom: 50px;
+    }
+}
+

@@ -49,7 +49,7 @@ function setSocial() {
     socialLinks.forEach(addSocialIcons);
 }
 
-setSocial();
+// setSocial();
 
 /*---------------------------------*/
 
@@ -62,7 +62,7 @@ const mobileView = window.matchMedia(`(max-width: 766px)`);
 const biTopTitle = document.querySelector('.top-title');
 const bibottomTitle = document.querySelector('.bottom-title');
 
-const mainImg = document.querySelector('.mainImg');
+const mainImg = document.querySelector('.MAINIMG');
 
 const HIDDEN_CLASSNAME = "hidden";
 let SELECTED_LANG = "ko";
@@ -72,18 +72,35 @@ function tabletViewHandler(view){
         if (indexHTML != null){
             biTopTitle.classList.add(HIDDEN_CLASSNAME);
             bibottomTitle.classList.remove(HIDDEN_CLASSNAME);
+            mainImg.src = "../assets/MainPageTop_Tablet.png";
         }
     } else {
         if (indexHTML != null){
             biTopTitle.classList.remove(HIDDEN_CLASSNAME);
             bibottomTitle.classList.add(HIDDEN_CLASSNAME);
-        } 
+            mainImg.src = "../assets/MainPageTop_Desktop.png";
+        }
+    }
+}
+
+function mobileViewHandler(view){
+    if (view.matches) {
+        if (indexHTML != null){
+            mainImg.src = "../assets/MainPageTop_Mobile.png";
+        }
+    } else {
+        if (indexHTML != null){
+            mainImg.src = "../assets/MainPageTop_Tablet.png";
+        }
     }
 }
 
 function viewController(){
     tabletViewHandler(tabletView);
-    tabletView.addEventListener("change", tabletViewHandler);   
+    tabletView.addEventListener("change", tabletViewHandler);  
+    
+    mobileViewHandler(mobileView);
+    mobileView.addEventListener("change", mobileViewHandler);
 }
 
 viewController();

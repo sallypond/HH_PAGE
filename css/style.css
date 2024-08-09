@@ -126,14 +126,13 @@ section {
 }
 
 .header-logo {
-    width: 250px;
+    margin-right: 50px;
     display: flex;
-    align-items: center;
 }
 
 .header-logo img {
-    width: 202px;
     height: 41px;
+    display: flex;
     transition: 0.3s ease;
 }
 
@@ -200,8 +199,12 @@ section {
 
 .mainImg {
     display: flex;
-    background: url('../assets/GameIntroduce_Desktop.png') no-repeat center center/cover;
-    height: 610px;
+    justify-content: center;
+}
+
+.mainImg_bi_background img {
+    width: 100%;
+    height: 100%;
 }
 
 .main-title {
@@ -300,7 +303,15 @@ section {
 /*-------------------- size control ----------------------*/
 
 @media(min-width:1921px) {
-    .about, .company, .games, .info, .info-bottom, .header-in, .footer-in, .main-title{
+
+    .about,
+    .company,
+    .games,
+    .info,
+    .info-bottom,
+    .header-in,
+    .footer-in,
+    .main-title {
         max-width: 1600px;
         margin: 0 auto;
     }
@@ -310,6 +321,14 @@ section {
     section {
         padding-left: 80px;
         padding-right: 80px;
+    }
+
+    .header-logo {
+        margin-right: 0px;
+    }
+
+    .header-logo img {
+        height: 52px;
     }
 
     .maintext {
@@ -333,10 +352,6 @@ section {
         top: 120px;
         padding: 12px;
         justify-content: center;
-    }
-
-    .mainImg {
-        height: 530px;
     }
 
     .main-title {
@@ -379,10 +394,6 @@ section {
         font-size: 23px;
     }
 
-    .mainImg {
-        height: 480px;
-    }
-
     .main-title {
         margin-left: 37px;
     }
@@ -399,5 +410,76 @@ section {
     .copyright {
         margin-top: 30px;
         font-size: 15px;
+    }
+}
+
+@media(max-width:600px) {
+    .navbar {
+        display: none !important;
+    }
+}
+
+@media(max-width:390px) {
+    section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .header {
+        padding-left: 12px;
+        padding-right: 12px;
+        height: 60px;
+    }
+
+    .header-logo img {
+        height: 26px;
+    }
+
+    .lang-icon i {
+        font-size: 17px;
+    }
+
+    .langList {
+        top: 60px;
+    }
+
+    #title {
+        font-size: 15px;
+    }
+
+    #subtitle {
+        font-size: 18px;
+    }
+
+    .maintext {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .langList {
+        font-size: 15px;
+        width: 40px;
+        height: 60px;
+    }
+
+    .krtext {
+        font-size: 12px !important;
+        line-height: 18px !important;
+    }
+
+    .footer {
+        height: 120px; 
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+
+    .copyright {
+        font-size: 8px;
+    }
+
+    .pondstudio img {
+        width: 70px;
     }
 }

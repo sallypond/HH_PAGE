@@ -1,5 +1,9 @@
-*{
+* {
     font-family: 'NEXON Lv1 Gothic OTF', "Kanit";
+}
+
+.mainImg {
+    background: url('../assets/GameIntroduce_Desktop.png') no-repeat center center/cover;
 }
 
 /* ---------------- gamelogo ---------------- */
@@ -44,7 +48,7 @@
 .info-img {
     display: flex;
     justify-content: center;
-    
+
     /* margin-left: 306px;
     margin-right: 306px; */
 }
@@ -64,7 +68,7 @@
     padding: 0px;
 }
 
-.bottom-img img{
+.bottom-img img {
     /* width: 100vw; */
     border-radius: 15px;
     width: 100%;
@@ -74,7 +78,7 @@
 /*-------------------- size control ----------------------*/
 
 @media(min-width:1921px) {
-    .logo-img{
+    .logo-img {
         max-width: 1600px;
         margin: 0 auto;
     }
@@ -86,7 +90,7 @@
     }
 
     .logo-img {
-       margin-left: 80px;
+        margin-left: 80px;
     }
 
     .logo-img img {
@@ -100,7 +104,7 @@
         margin-right: 0px;
     }
 
-    .info-img img{
+    .info-img img {
         width: 100%;
         content: url(../assets/GameIntro_Ch_Small.png);
     }
@@ -113,16 +117,51 @@
 
     .logo-img {
         margin-left: 0px;
-     }
- 
+    }
+
     .logo-img img {
-         width: 339px;
-         height: 339px;
-     }
- 
-     .info-text {
+        width: 339px;
+        height: 339px;
+    }
+
+    .info-text {
         width: 103%;
-         /* margin-left: 24px;
-         margin-right: 24px; */
-     }
+    }
+}
+
+@media(max-width:390px) {
+    .logo-img img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .logo-img {
+        height: 240px;
+    }
+
+    .info {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .info-title {
+        margin-bottom: 30px;
+    }
+
+    .info-content {
+        margin-bottom: 30px;
+    }
+
+    .info-bottom {
+        margin-bottom: 50px;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    .info-text {
+        width: 100%;
+    }
+
 }
